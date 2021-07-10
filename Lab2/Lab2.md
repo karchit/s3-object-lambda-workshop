@@ -18,11 +18,11 @@ As part of this challenge, try to do the following which will require you to go 
 
 <details><summary>Solution</summary>
 <p>
+One possible solution:
 ```python
-transformed_object = original_object.upper().replace(" ", "")
+    for entity in filter(lambda pe: pe["Type"].lower() != "name", pii_entities['Entities']):
+        secret_entity = original_object[entity["BeginOffset"] : entity["EndOffset"]]
+        transformed_object = transformed_object.replace(secret_entity, "<" + entity["Type"] + ">")
 ```
-</p>
-<p>
-Using regex is also totally cool
 </p>
 </details>
