@@ -9,6 +9,8 @@ Note: Sharp has platform-specific requirements and hence you'll notice the anoma
 
 Finally, before you can try this out you'd that you'd also have to increase the execution time of your lambda to ~20 seconds. 
 
+This is the final lab. Once you're done, be sure to check out the `cleanup` branch to delete your resources. 
+
 *** 
 
 #### Image resources
