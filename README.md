@@ -17,4 +17,4 @@ Almost all resources that you've created should have your name as suffix.
 
 6. That is it! Fin. 
 
-![image](https://media.giphy.com/media/ely3apij36BJhoZ234/giphy.gif)
+![image](https://i.giphy.com/media/ely3apij36BJhoZ234/giphy.webp)
