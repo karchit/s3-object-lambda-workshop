@@ -3,6 +3,8 @@
 
 Personally identifiable information aka PII is bad, and companies spend hundreds of thousands of dollars to make sure that their customers PII is not leaked. AWS provides a service called [Comprehend](https://aws.amazon.com/comprehend/) which can detect PII in text and in this workshop we will leverage it. 
 
+Recommended name for resources in this lab: `text-redact-pii-{your_name}`
+
 Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. Also, be sure to review the python code to get an understanding of how comprehend is being leveraged to censor PII. 
 
 1. Add the following Comprehend policy to your inline policy created in Lab 1 
@@ -37,7 +39,9 @@ One possible solution:
 #### Challenge 2
 In this challenge you will create another Lambda. 
 
-A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc, does not contain any PII, return it as it is. 
+Recommended name for resources: `text-deny-pii-{your_name}`
+
+A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc does not contain any PII, return it as it is. 
 
 For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_wei_no_pii.txt) which contains redacted PII. 
 
@@ -45,6 +49,8 @@ For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_we
 <p>
 
 Detect PII Entities is an expensive (computationally and otherwise) API call. Does the <a href="https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html" target="_blank">AWS Comprehend Docs</a> have any other API which can be used instead?
+
+Also, note that you needn't create new Access Points or Bucket to solve this challenge. You only need to update your code, update IAM Policy (if required), and create a new S3 Object Lambda Access point which points to `text-redact-pii` access point created in this Lab.
 
 </p>
 </details>
