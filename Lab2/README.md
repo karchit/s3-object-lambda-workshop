@@ -37,7 +37,7 @@ Feel free to use this text file which contains no PII for testing purposes.
 <details><summary>Hint</summary>
 <p>
 
-Detect PII Entities is an expnsive (computationally and otherwise) API call. Does the <a href="https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html">AWS Comprehend Docs</a> mention any other API which can be used instead?
+Detect PII Entities is an expnsive (computationally and otherwise) API call. Does the <a href="https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html" target="_blank">AWS Comprehend Docs</a> mention any other API which can be used instead?
 
 </p>
 </details>
