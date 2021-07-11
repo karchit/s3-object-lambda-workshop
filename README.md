@@ -33,7 +33,7 @@ zip -r function.zip .
 Before we can proceed, we need to modify our lambda's role so it can work with S3 Object Lambda. When you created your lambda function, it created a default IAM role which has access to create and write to Cloudwatch Logs. We will amend this role, by adding a new policy:
 
 1. Click on _Configuration_ tab of your lambda function.
-2. Click on the link under Execution Role > Role Name. Note down this role name, as we will be modifying and using it in the future labs as well.
+2. Click on the link under Permissions > Execution Role > Role Name. Note down this role name, as we will be modifying and using it in the future labs as well.
 3. On the IAM console, under _Permissions_ tab, click on _Add Inline Policy_. 
 4. Under _Service_, search and select `S3 Object Lambda`
 5. Under _Actions_, expand _Write_ and choose _WriteGetObjectResponse_ 
@@ -63,7 +63,8 @@ S3 Access Points allow our object lambda to fetch the object we're transforming 
 2. Click on _Create Access Point_
 3. Access Point Name: text-to-uppercase-{your_name}
 4. Under bucket name, select the S3 bucket you had created earlier. 
-5. Click on _Create access point_
+5. Select _Internet_ as your Network Origin
+6. Click on _Create access point_
 ![image](./images/access-point.png)
 
 #### S3 Object Lambda Access Points
