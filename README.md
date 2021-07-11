@@ -82,7 +82,7 @@ We will now see if our Object Lambda is working as intended.
 
 1. Select your S3 Object Lambda Access Point and you should see the objects you have uploaded to your bucket. 
 2. Select one or multiple of them and click on _Open_ (Allow pops if needed)
-3. You should now see a lot of text in scream-case. ✌️
+3. You should now see a lot of text in scream-case. 😱
 
 ***
 #### Challenge
