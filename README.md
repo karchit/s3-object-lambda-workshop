@@ -10,7 +10,7 @@ As you had in Lab 2, when creating your lambda, click on _Change default executi
 
 ***
 
-#### Challenge 1
+#### Challenge
 
 You can find a csv file with 1,00,00 rows [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/10000-Sales-Records.zip).
 If you upload it to your bucket and try to fetch the JSON of it from your object lambda, you'll see an error message. 
@@ -31,9 +31,10 @@ Go to _Monitor_ tab in your lambda > Logs > View Logs in Cloudwatch. From there 
 <p>
 
 Increase your lambda timeout to a  higher value ~ around 10 seconds should be enough for this challenge. 
-It is worth noting that S3 Object Lambdas are required to WriteGetObjectResponse within 60 seconds. 
+You can do so by going to _Configuration_ tab > _General Configuration_ and change your timeout value. 
 
-You can do so by going to _Configuration_ tab > General Configuration and change your timeout value. ⏱️
+It is worth noting that S3 Object Lambdas are required to WriteGetObjectResponse within 60 seconds. ⏱️
+
 
 </p>
 </details>
