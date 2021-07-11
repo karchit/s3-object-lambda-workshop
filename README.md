@@ -5,14 +5,14 @@ Perform all the steps as you had in Lab 1 with the new code, except while creati
 
 We will mix things up in this lab and instead of a python function to manipulate the image, we will use Node.js with its fantastic [sharp](https://sharp.pixelplumbing.com/) package.
 
-Note: Sharp has platform-specific requirements. Hence, you will notice that the anomalous [package.json](./solution/package.json) installation script. This is not the best practice and you would really be using Docker with Lambda. However, that is beyond the scope of this workshop. If you'd like to learn more, have a look at this [AWS Doc](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
+Note: Sharp has platform-specific requirements and hence you'll notice the anomalous [package.json](./solution/package.json#L7) installation script. This is not best practice and you would really be using [Docker with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html) and/or [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). This is however is beyond the scope of this workshop. 
 
 Finally, before you can try this out you'd that you'd also have to increase the execution time of your lambda to ~20 seconds. 
 
 *** 
 
 #### Image resources
-To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder which you can use for testing. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/images/people)
+To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/images/people)
 
 ***
 
@@ -30,7 +30,7 @@ We want to make these thumbnails a bit retro so the challenge is to make the ima
 
 const resized = await sharp(data)
     .resize({ width: 256, height: 256 })
-    .greyscale() //We added this line. 
+    .greyscale() //Add this line. 
     .toBuffer();
 
 ```
