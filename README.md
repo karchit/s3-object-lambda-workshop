@@ -1,6 +1,6 @@
 # AWS S3 Object Lambda Workshop
 
-This repo contains code and instructions to build S3 Object Lambda. It is split into 3 branches, each containing instructions and code for a different use-case.
+This repo contains code and instructions to build S3 Object Lambda. It 
 
 ### S3 and S3 Object Lambda
 S3 or Simple Storage Service provides object storage in a scalable and secure environment. 
