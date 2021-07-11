@@ -16,7 +16,7 @@ Ensure that the `lambda_function.py` is in the same directory as your dependenci
 
 2. From the solution directory, create a zip of all the dependencies and the function file either using Finder or using the shell command:
 ```Shell
-zip -r ../function.zip -t .
+zip -r function.zip -t .
 ```
 
 3. From the AWS Console, go to [Lambda homepage](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions) and click on "Create Function".
