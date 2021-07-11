@@ -1,19 +1,39 @@
 # AWS S3 Object Lambda Workshop
+### Lab 3 - Convert CSV to JSON
 
-This repo contains code and instructions to build S3 Object Lambda. It is split into 3 branches, each containing instructions and code for a different use-case.
+Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. 
 
-### S3 and S3 Object Lambda
-S3 or Simple Storage Service provides object storage in a scalable and secure environment. 
+Consider the new lambda code which converts a csv file into a json stream and returns it back to the object lambda.
 
-Sometimes, however, you want to be able to share different versions/views of your objects.  Traditionally this would be done by creating multiple copies of the objects or adding your own proxy layer in front of the S3 bucket, both of which are complex and difficult to develop and maintain.
+As you had in Lab 2, when creating your lambda, click on _Change default execution role_ and select _Use an existing role_. From the dropdown below, use the Role you had noted down in Lab1. 
+![image](./images/existing-role-lambda.png)
 
-With S3 object lambda, you can write your own function which can process, transform or alter your files in any way you please before it is returned to your application or user. 
+***
 
-Example Use Cases:
-- If you have a CSV file which needs to be translated into XML for one application and into JSON for another. 
-- Removing sensitive or PII from documents used for analytics
-- Image editing (resize, reshaping, watermarking etc.) on the fly
-- Adding finer access controls to objects such as authorisation against a database
+#### Challenge 1
 
-Important Note:
-To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
+You can find a csv file with 1,00,00 rows here.
+If you upload it to your bucket and try to fetch the JSON of it from your object lambda, you'll see an error message. 
+
+Why could this be happening? And how can you fix it? 
+
+<details><summary>Hint</summary>
+<p>
+
+By default, lambda has permissions to write out logs to Cloudwatch. 
+Go to _Monitor_ tab in your lambda > Logs > View Logs in Cloudwatch. From there click on "Search Log Group" and you'd notice that a log message *after* your lambda execution has concluded
+
+</p>
+</details>
+
+<details>
+<summary>Solution</summary>
+<p>
+
+Increase your lambda timeout to a  higher value ~ around 10 seconds should be enough for this challenge. 
+It is worth noting that S3 Object Lambdas are required to WriteGetObjectResponse within 60 seconds. 
+
+You can do so by going to _Configuration_ tab > General Configuration and change your timeout value. ⏱️
+
+</p>
+</details>

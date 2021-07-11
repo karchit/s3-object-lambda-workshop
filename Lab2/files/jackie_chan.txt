@@ -1,4 +1,0 @@
-Hi, my name is Jackie Chan. I like to use AWS for my company called SuperAction Private Ltd.
-You can contact me on my mobile: 0415 000 000 or via post at: 100 Flinders Street, Melbourne, Australia 3000
-I am more than happy to give you my AWS Access Key which is "oaIoIbsXdkvSnACpbPXU"
-and my secret key which is "k9D7YtIuMY2F5seJgnboKJtTCjPFqdKmbmJ589DT"
