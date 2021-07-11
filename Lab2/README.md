@@ -30,20 +30,26 @@ One possible solution:
 #### Challenge 2
 In this challenge you will create another Lambda. 
 
-A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. 
+A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc, does not contain any PII return it as it is. 
+
+Feel free to use this text file which contains no PII for testing purposes. 
 
 <details><summary>Hint</summary>
 <p>
-Detect PII Entities is an expnsive (computationally and otherwise) API call. Does [AWS Comprehend Docs](https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html) mention any other API which can be used instead?
+
+Detect PII Entities is an expnsive (computationally and otherwise) API call. Does the <a href="https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html">AWS Comprehend Docs</a> mention any other API which can be used instead?
+
 </p>
 </details>
-<details><summary>Solution</summary>
+<details>
+<summary>Solution</summary>
 <p>
+
 One possible solution:
+
 ```python
-    for entity in filter(lambda pe: pe["Type"].lower() != "name", pii_entities['Entities']):
-        secret_entity = original_object[entity["BeginOffset"] : entity["EndOffset"]]
-        transformed_object = transformed_object.replace(secret_entity, "<" + entity["Type"] + ">")
+
 ```
+
 </p>
 </details>
