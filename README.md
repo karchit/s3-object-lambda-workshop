@@ -35,7 +35,7 @@ In this challenge you will create another Lambda.
 
 A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc, does not contain any PII return it as it is. 
 
-Feel free to use this text file which contains no PII for testing purposes. 
+For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_wei_no_pii.txt) which contains redacted PII.
 
 <details><summary>Hint</summary>
 <p>
@@ -48,11 +48,9 @@ Detect PII Entities is an expensive (computationally and otherwise) API call. Do
 <summary>Solution</summary>
 <p>
 
-One possible solution:
+A working solution can be found here: https://pastebin.com/s68SDfvy
 
-```python
-
-```
+Make sure your Lambda has ContainsPiiEntities IAM permissions for the above solution to work.
 
 </p>
 </details>
