@@ -12,7 +12,7 @@ As you had in Lab 2, when creating your lambda, click on _Change default executi
 
 #### Challenge 1
 
-You can find a csv file with 1,00,00 rows here.
+You can find a csv file with 1,00,00 rows [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/10000-Sales-Records.zip).
 If you upload it to your bucket and try to fetch the JSON of it from your object lambda, you'll see an error message. 
 
 Why could this be happening? And how can you fix it? 
