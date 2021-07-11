@@ -1,19 +1,40 @@
 # AWS S3 Object Lambda Workshop
+### Lab 4 - Image to thumbnail
 
-This repo contains code and instructions to build S3 Object Lambda. It is split into 3 branches, each containing instructions and code for a different use-case.
+Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. 
 
-### S3 and S3 Object Lambda
-S3 or Simple Storage Service provides object storage in a scalable and secure environment. 
+We will mix things up in this lab and instead of a python function to manipulate the image, we will use Node.js with its fantastic [sharp](https://sharp.pixelplumbing.com/) package.
 
-Sometimes, however, you want to be able to share different versions/views of your objects.  Traditionally this would be done by creating multiple copies of the objects or adding your own proxy layer in front of the S3 bucket, both of which are complex and difficult to develop and maintain.
+Note: Sharp has platform-specific requirements. Hence, you will notice that the anomalous [package.json](./package.json) installation script. This is not the best practice and you would really be using Docker with Lambda. However, that is beyond the scope of this workshop. If you'd like to learn more, have a look at this [AWS Doc](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
 
-With S3 object lambda, you can write your own function which can process, transform or alter your files in any way you please before it is returned to your application or user. 
+Finally, before you can try this out you'd that you'd also have to increase the execution time of your lambda to ~20 seconds. 
 
-Example Use Cases:
-- If you have a CSV file which needs to be translated into XML for one application and into JSON for another. 
-- Removing sensitive or PII from documents used for analytics
-- Image editing (resize, reshaping, watermarking etc.) on the fly
-- Adding finer access controls to objects such as authorisation against a database
+*** 
 
-Important Note:
-To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
+#### Image resources
+To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder which you can use for testing. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/images/people) and upload to your S3 bucket
+
+***
+
+#### Challenge
+Fairly easy one once you've had a peek at Sharp API documentation. 
+We want to make these thumbnails a bit retro so see the challenge is to make the images _greyscale_ before we write it out to object lambda.
+
+</p>
+</details>
+<details>
+<summary>Solution</summary>
+<p>
+
+```javascript
+
+const resized = await sharp(data)
+    .resize({ width: 256, height: 256 })
+    .greyscale() //We added this line. 
+    .toBuffer();
+
+```
+
+</p>
+</details>
+

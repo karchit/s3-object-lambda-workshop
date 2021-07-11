@@ -1,0 +1,17 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm i --arch=x64 --platform=linux sharp && npm i --arch=x64 --platform=linux axios",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "sharp": "^0.28.3"
+  }
+}
