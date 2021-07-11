@@ -16,4 +16,5 @@ Example Use Cases:
 - Adding finer access controls to objects such as authorisation against a database
 
 Important Note:
-To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
+- To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
+- Once you're done, be sure to check out the `cleanup` branch to delete your resources.
