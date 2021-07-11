@@ -88,9 +88,11 @@ We will now see if our Object Lambda is working as intended.
 A fairly easy one - see if you can strip off all the spaces in your text files in addition to keeping it uppercase. 
 <details><summary>Solution</summary>
 <p>
+
 ```python
 transformed_object = original_object.upper().replace(" ", "")
 ```
+
 </p>
 <p>
 Using regex is also totally cool
