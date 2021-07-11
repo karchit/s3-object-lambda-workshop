@@ -22,7 +22,7 @@ To avoid a copyright notice, I have refrained from adding any images in the [fil
 
 #### Challenge
 Fairly easy one once you've had a peek at Sharp API documentation. 
-We want to make these thumbnails a bit retro so the challenge is to make the images _greyscale_ before we write it out to object lambda.
+We want to make these thumbnails a bit retro so make the images _greyscale_ before we write it out to object lambda.
 
 </p>
 </details>
