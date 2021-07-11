@@ -16,5 +16,3 @@ Almost all resources that you've created should have your name as suffix.
 5. Finally go to the _Buckets_ page, and empty out your S3 buckets. This is required before you can delete them. Once your bucket is empty, you should be able to delete them.
 
 6. That is it! Fin. 
-
-![image](https://i.giphy.com/media/ely3apij36BJhoZ234/giphy.webp)
