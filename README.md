@@ -14,14 +14,19 @@ Example Use Cases:
 - Removing sensitive or PII from documents used for analytics
 - Image editing (resize, reshaping, watermarking etc.) on the fly
 - Adding finer access controls to objects such as authorisation against a database
+ *** 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=uTBgpK07E38" target="_blank"><img src="http://img.youtube.com/vi/uTBgpK07E38/0.jpg" />
+ S3 Object Lambda AWS Video (taken from [here](https://aws.amazon.com/s3/features/object-lambda/))
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=uTBgpK07E38" target="_blank"><img src="http://img.youtube.com/vi/uTBgpK07E38/0.jpg" /></a>
+
+Illustration of AWS S3 Object Lambda
 ![image](https://d1.awsstatic.com/product-page-diagram_S3-Object-Lambda%402x.b5b78c632ed6d6145efb03ab6c338ac4375d1fdf.png)
 
+*** 
 Important Note:
 - To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
 - Once you're done, be sure to check out the `cleanup` branch to delete your resources.
 
-
+***
 Once you're good to dive in to creating your own Object Lambdas, checkout `Lab1` branch in this repo.
