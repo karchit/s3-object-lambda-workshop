@@ -1,6 +1,8 @@
 # AWS S3 Object Lambda Workshop
 ### Lab 4 - Image to thumbnail
 
+Altering images is one of the most common Lambda use-cases. It is often used in conjugation with [AWS Rekognition](https://aws.amazon.com/rekognition/) to do some fancy machine-learning stuff. In this lab, we will keep it simple and use open-source image processing libraries to convert images into thumbnails. 
+
 Perform all the steps as you had in Lab 1 with the new code, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. 
 
 We will mix things up in this lab and instead of a python function to manipulate the image, we will use Node.js with its fantastic [sharp](https://sharp.pixelplumbing.com/) package.
