@@ -1,6 +1,8 @@
 # AWS S3 Object Lambda Workshop
 ### Lab 2 - Redact PII using AWS Comprehend
 
+Personally identifiable information aka PII is bad, and companies spend hundreds of thousands of dollars to make sure that their customers PII is not leaked. AWS provides a service called [Comprehend](https://aws.amazon.com/comprehend/) which can detect PII in text and in this workshop we will leverage it. 
+
 Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. Also, be sure to review the python code to get an understanding of how comprehend is being leveraged to censor PII. 
 
 1. Add the following Comprehend policy to your inline policy created in Lab 1 
@@ -35,9 +37,9 @@ One possible solution:
 #### Challenge 2
 In this challenge you will create another Lambda. 
 
-A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc, does not contain any PII return it as it is. 
+A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc, does not contain any PII, return it as it is. 
 
-For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_wei_no_pii.txt) which contains redacted PII.
+For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_wei_no_pii.txt) which contains redacted PII. 
 
 <details><summary>Hint</summary>
 <p>
