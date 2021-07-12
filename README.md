@@ -1,12 +1,9 @@
 # AWS S3 Object Lambda Workshop
 ### Lab 3 - Convert CSV to JSON
 
-Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. 
+In this Lab, our lambda will convert a CSV file to JSON using in-built python functions. Converting CSV to JSON can help us feed data into a REST API.
 
-Consider the new lambda code which converts a csv file into a json stream and returns it back to the object lambda.
-
-As you had in Lab 2, when creating your lambda, click on _Change default execution role_ and select _Use an existing role_. From the dropdown below, use the Role you had noted down in Lab1. 
-![image](./images/existing-role-lambda.png)
+As you had in Lab 2, update the lambda code by fetching the pip dependencies and recreating your archive uploading it to Lambda via the console.
 
 ***
 
