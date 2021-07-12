@@ -3,17 +3,10 @@
 
 Personally identifiable information aka PII is bad, and companies spend hundreds of thousands of dollars to make sure that their customers PII is not leaked. AWS provides a service called [Comprehend](https://aws.amazon.com/comprehend/) which can detect PII in text and in this workshop we will leverage it. 
 
-Recommended name for resources in this lab: `text-redact-pii-{your_name}`
 
-Perform all the steps as you had in Lab 1 with the new code and S3 files in Lab2 directory, except while creating the Lambda you will reuse the IAM role which has permissions to interact with S3 Object Lambda. Also, be sure to review the python code to get an understanding of how comprehend is being leveraged to censor PII. 
+You can either re-create all resources you had in Lab 1 or reuse the bucket, access points and lambda. You can reinstall your pip dependencies, archive them with your code and then upload it to Lambda via console.
 
-1. Add the following Comprehend policy to your inline policy created in Lab 1 
-![image](./images/comprehend-policy.png)
-
-2. When creating your lambda, click on _Change default execution role_ and select _Use an existing role_. From the dropdown below, use the Role you had noted down in Lab1. 
-![image](./images/existing-role-lambda.png)
-
-
+As you had added S3 Object Lambda permissions in Lab 1 to your Lambda IAM role, you'd have to add Comprehend permissions so your function can make the required API calls.
 ***
 #### Challenge 1
 As part of this challenge, try to do the following which will require you to further examine the response model from AWS Comprehend's Detect PII Entities API [found here](https://docs.aws.amazon.com/comprehend/latest/dg/API_DetectPiiEntities.html):
