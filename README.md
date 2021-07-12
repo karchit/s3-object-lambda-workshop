@@ -1,11 +1,11 @@
 # AWS S3 Object Lambda Workshop
 
-This repo contains code and instructions to build S3 Object Lambda. 
+This repo contains code and instructions to understand and dive deep into AWS S3 Object Lambda. It contains a series of Labs which have been inspired by real industry tested use cases for this feature.
 
 ### S3 and S3 Object Lambda
 S3 or Simple Storage Service provides object storage in a scalable and secure environment. 
 
-Sometimes, however, you want to be able to share different versions/views of your objects.  Traditionally this would be done by creating multiple copies of the objects or adding your own proxy layer in front of the S3 bucket, both of which are complex and difficult to develop and maintain.
+Sometimes, however, you want to be able to share different views of your objects.  Traditionally this would be done by creating multiple copies of the objects or adding your own proxy layer in front of the S3 bucket, both of which are complex and difficult to develop and maintain.
 
 With S3 object lambda, you can write your own function which can process, transform or alter your files in any way you please before it is returned to your application or user. 
 
