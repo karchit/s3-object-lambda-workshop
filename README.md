@@ -11,6 +11,7 @@ As you had in Lab 2, update the lambda code by fetching the pip dependencies and
 
 You can find a csv file with 1,00,00 rows [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/10000-Sales-Records.zip).
 If you upload it to your bucket and try to fetch from the object lambda access point, you'll see an error message. 
+(N.B: The lambda may successfully process the records w/o an error. If this happens, you can duplicate several thousand records in your to reproduce the error)
 
 Why could this be happening? And how can you fix it? 
 
