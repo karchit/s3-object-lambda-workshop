@@ -7,11 +7,13 @@ Personally identifiable information aka PII is bad, and companies spend hundreds
 You can either re-create all resources you had in Lab 1 or reuse the bucket, access points and lambda. You can reinstall your pip dependencies, archive them with your code and then upload it to Lambda via console.
 
 As you had added S3 Object Lambda permissions in Lab 1 to your Lambda IAM role, you'd have to add Comprehend permissions so your function can make the required API calls.
+
+![image](./images/comprehend-policy.png)
 ***
 #### Challenge 1
 As part of this challenge, try to do the following which will require you to further examine the response model from AWS Comprehend's Detect PII Entities API [found here](https://docs.aws.amazon.com/comprehend/latest/dg/API_DetectPiiEntities.html):
 
-1. Instead of replacing PII with asterisks, replace it with `<type_of_PII>`. So the string, `My mobile number is 04000 000 000` will be transformed to `My mobile number is <PHONE>`.
+1. Instead of replacing PII with asterisks, replace it with `<type_of_PII>`. So the text, `My mobile number is 04000 000 000` will be transformed to `My mobile number is <PHONE>`.
 2. For the purpose of this challenge, we deem that `NAME` is no longer considered PII. So alter your code so it no longer redacts names from our text. 
 
 <details><summary>Solution</summary>
@@ -30,13 +32,14 @@ One possible solution:
 
 ***
 #### Challenge 2
-In this challenge you will create another Lambda. 
-
-Recommended name for resources: `text-deny-pii-{your_name}`
 
 A third-party application requires access to your bucket and its files. However, business requirements dictate that any file which _contains any_ PII, should not be returned. Instead, if the application requests for a doc with PII, we should return an `Unauthorized` error. If the doc does not contain any PII, return it as it is. 
 
 For testing purpose you can use the file [zhang_wei_no_pii.txt](./files/zhang_wei_no_pii.txt) which contains redacted PII. 
+
+You can modify your existing lambda and its access point or create new ones. If creating a new lambda, be sure to use the existing role you had noted in Lab 1 or add Comprehend and S3 Object Lambda permissions to your new role.
+
+![image](./images/existing-role-lambda.png)
 
 <details><summary>Hint</summary>
 <p>

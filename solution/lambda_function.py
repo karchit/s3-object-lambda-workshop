@@ -26,7 +26,7 @@ def lambda_handler(event, context):
     transformed_object = original_object
 
     for entity in pii_entities['Entities']:
-        secret_entity = original_object[entity["BeginOffset"] : entity["EndOffset"] + 1]
+        secret_entity = original_object[entity["BeginOffset"] : entity["EndOffset"]]
         transformed_object = transformed_object.replace(secret_entity, "*" * len(secret_entity))
 
     # Write object back to S3 Object Lambda
