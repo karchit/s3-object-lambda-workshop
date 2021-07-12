@@ -3,6 +3,8 @@
 
 We'll start off with a simple function, one which converts all the text in a file to uppercase and returns it to the user. 
 
+You can reuse the resources created in this Lab in the subsequent ones. 
+
 ***
 #### Lambda function
 We will first create our lambda function, which will do this transformation:
@@ -16,12 +18,12 @@ Ensure that the `lambda_function.py` is in the same directory as your dependenci
 
 2. From the solution directory, create a zip of all the dependencies and the function file either using Finder or using the shell command:
 ```Shell
-zip -r function.zip .
+zip -r9 function.zip .
 ```
 
 3. From the AWS Console, go to [Lambda homepage](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions) and click on "Create Function".
 
-4. Create a function called `text-to-uppercase-{your_name}` and choose the runtime as Python 3.8. Leave other settings as it is and click on "Create Function"
+4. Create a function called `s3-object-lambda-{your_name}` and choose the runtime as Python 3.8. Leave other settings as it is and click on "Create Function"
 
 ![image](./images/lambda-create.png)
 
@@ -61,7 +63,7 @@ S3 Access Points allow our object lambda to fetch the object we're transforming 
 
 1. From AWS S3 console, go to _Access Points_ in the left panel
 2. Click on _Create Access Point_
-3. Access Point Name: text-to-uppercase-{your_name}
+3. Access Point Name: s3-object-lambda-{your_name}
 4. Under bucket name, select the S3 bucket you had created earlier. 
 5. Select _Internet_ as your Network Origin
 6. Click on _Create access point_
@@ -73,8 +75,8 @@ We now have all the resources to create our Object Lambda access point.
 
 1. From AWS S3 console, go to Object Lambda Access Points in the left panel
 2. Click on _Create Object Lambda Access Point_
-3. Object Lambda Access Point name: text-to-uppercase-{your_name}
-4. Supporting Access Point, use _Browse S3_ and select the Access Point you had just created. Ensure the region is US East (N. Virginia) us-east-1
+3. Object Lambda Access Point name: s3-object-lambda-{your_name}
+4. Supporting Access Point, use _Browse S3_ and select the Access Point you had just created.
 5. Likewise, select your lambda function from the dropdown and use the `$LATEST` version.
 6. Finally, click on _Create Object Lambda Access Point_ 
 
