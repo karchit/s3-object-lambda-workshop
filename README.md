@@ -13,7 +13,7 @@ As you had in Lab 2, when creating your lambda, click on _Change default executi
 #### Challenge
 
 You can find a csv file with 1,00,00 rows [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/10000-Sales-Records.zip).
-If you upload it to your bucket and try to fetch the JSON of it from your object lambda, you'll see an error message. 
+If you upload it to your bucket and try to fetch from the object lambda access point, you'll see an error message. 
 
 Why could this be happening? And how can you fix it? 
 
@@ -21,7 +21,7 @@ Why could this be happening? And how can you fix it?
 <p>
 
 By default, lambda has permissions to write out logs to Cloudwatch. 
-Go to _Monitor_ tab in your lambda > Logs > View Logs in Cloudwatch. From there click on "Search Log Group" and you'd notice that a log message *after* your lambda execution has concluded.
+Go to _Monitor_ tab in your lambda > Logs > View Logs in Cloudwatch. From there click on "Search Log Group" and you'd notice that log message *after* your lambda execution has concluded.
 
 If you cannot see logs or get an error on the Cloudwatch console, you'd need to extend your lambda role. It should already have Cloudwatch log permissions but maybe restricted on `Resources`, so change that to `*` so it unfettered access to create and add logs.
 
