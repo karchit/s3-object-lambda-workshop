@@ -46,7 +46,7 @@ You can modify your existing lambda and its access point or create new ones. If 
 
 Detect PII Entities is an expensive (computationally and otherwise) API call. Does the <a href="https://docs.aws.amazon.com/comprehend/latest/dg/API_Operations_Amazon_Comprehend.html" target="_blank">AWS Comprehend Docs</a> have any other API which can be used instead?
 
-Also, note that you needn't create new Access Points or Bucket to solve this challenge. You only need to update your code, update IAM Policy (if required), and create a new S3 Object Lambda Access point which points to `text-redact-pii` access point created in this Lab.
+Also, note that you needn't create new Access Points or Bucket to solve this challenge. You only need to paste in your code, update IAM Policy (if required).
 
 </p>
 </details>
