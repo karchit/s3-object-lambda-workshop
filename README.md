@@ -25,7 +25,6 @@ Illustration of AWS S3 Object Lambda
 
 *** 
 Important Note:
-- To maintain consistency, we will only use US East (N. Virginia) (us-east-1) region for this workshop. 
 - Once you're done, be sure to check out the `cleanup` branch to delete your resources.
 
 ***
