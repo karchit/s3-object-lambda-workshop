@@ -14,7 +14,23 @@ We will first create our lambda function, which will do this transformation:
 ```Shell
 pip3 install -r requirements.txt -t .
 ```
-Ensure that the `lambda_function.py` is in the same directory as your dependencies. 
+Ensure that the `lambda_function.py` is in the same directory as your dependencies so the structure looks something like:
+```
+.
+├── bin
+├── certifi
+├── certifi-2021.5.30.dist-info
+├── chardet
+├── chardet-4.0.0.dist-info
+├── idna
+├── idna-2.10.dist-info
+├── lambda_function.py
+├── requests
+├── requests-2.25.1.dist-info
+├── requirements.txt
+├── urllib3
+└── urllib3-1.26.6.dist-info
+```
 
 2. From the solution directory, create a zip of all the dependencies and the function file either using Finder or using the shell command:
 ```Shell
