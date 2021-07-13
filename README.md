@@ -21,7 +21,7 @@ Why could this be happening? And how can you fix it?
 By default, lambda has permissions to write out logs to Cloudwatch. 
 Go to _Monitor_ tab in your lambda > Logs > View Logs in Cloudwatch. From there click on "Search Log Group" and you'd notice that log message *after* your lambda execution has concluded.
 
-If you cannot see logs or get an error on the Cloudwatch console, you'd need to extend your lambda role. It should already have Cloudwatch log permissions but maybe restricted on `Resources`, so change that to `*` so it unfettered access to create and add logs.
+If you cannot see logs or get an error on the Cloudwatch console, you'd need to extend your lambda role. It should already have Cloudwatch log permissions but maybe restricted on `Resources`, so change that to `*` so it has unfettered access to create and add logs.
 
 </p>
 </details>
