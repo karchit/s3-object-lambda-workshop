@@ -36,6 +36,7 @@ Ensure that the `lambda_function.py` is in the same directory as your dependenci
 ```Shell
 zip -r9 function.zip .
 ```
+Windows users can archive the directory using the default windows explorer or other 3rd party software. 
 
 3. From the AWS Console, go to [Lambda homepage](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions) and click on "Create Function".
 
