@@ -71,10 +71,10 @@ We will be modifying this inline policy in future labs.
 
 1. From AWS search bar, search and go to S3
 2. From the _Buckets_ page, click on _Create Bucket`
-3. Bucket Name: text-to-uppercase-{your_name}
+3. Put in an easy identifier for your bucket name
 4. Leave other settings as they are and click on _Create bucket_
 5. Once your bucket is created, upload the two txt files under the [files directory](./files) by going to _Upload_ and _Add files_
-6. Take a moment to go over the two files. In this lab, we will see that the text in these files is all converted to uppercase. 
+6. Take a moment to go over the two files. In a few moments, we will see that the text in these files is all converted to uppercase. 
 
 #### S3 Access Points
 
@@ -82,7 +82,7 @@ S3 Access Points allow our object lambda to fetch the object we're transforming 
 
 1. From AWS S3 console, go to _Access Points_ in the left panel
 2. Click on _Create Access Point_
-3. Access Point Name: s3-object-lambda-{your_name}
+3. Put in an easy identifier for your access point name
 4. Under bucket name, select the S3 bucket you had created earlier. 
 5. Select _Internet_ as your Network Origin
 6. Click on _Create access point_
@@ -94,7 +94,7 @@ We now have all the resources to create our Object Lambda access point.
 
 1. From AWS S3 console, go to Object Lambda Access Points in the left panel
 2. Click on _Create Object Lambda Access Point_
-3. Object Lambda Access Point name: s3-object-lambda-{your_name}
+3. Put in an easy identifier for your Object Lambda Access Point name
 4. Supporting Access Point, use _Browse S3_ and select the Access Point you had just created.
 5. Likewise, select your lambda function from the dropdown and use the `$LATEST` version.
 6. Finally, click on _Create Object Lambda Access Point_ 
@@ -104,7 +104,7 @@ We will now see if our Object Lambda is working as intended.
 
 1. Select your S3 Object Lambda Access Point and you should see the objects you have uploaded to your bucket. 
 2. Select one or multiple of them and click on _Open_ (Allow pops if needed)
-3. You should now see a lot of text in scream-case. 😱
+3. You should now see all of the text in scream-case. 😱
 
 ***
 #### Challenge
