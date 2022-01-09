@@ -6,7 +6,7 @@ Personally identifiable information aka PII is bad, and companies spend hundreds
 
 You can either re-create all resources you had in Lab 1 or reuse the bucket, access points and lambda. You can reinstall your pip dependencies, archive them with your code and then upload it to Lambda via console.
 
-As you had added S3 Object Lambda permissions in Lab 1 to your Lambda IAM role, you'd have to add Comprehend permissions so your function can make the required API calls.
+As you had added S3 Object Lambda permissions in Lab 1 to your Lambda IAM role, you'd have to add Comprehend `DetectPiiEntites` permissions so your function can make the required API calls.
 
 ![image](./images/comprehend-policy.png)
 ***
