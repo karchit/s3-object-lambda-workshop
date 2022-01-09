@@ -70,7 +70,7 @@ We will be modifying this inline policy in future labs.
 #### S3 Bucket
 
 1. From AWS search bar, search and go to S3
-2. From the _Buckets_ page, click on _Create Bucket`
+2. From the _Buckets_ page, click on _Create Bucket_
 3. Put in an easy identifier for your bucket name
 4. Leave other settings as they are and click on _Create bucket_
 5. Once your bucket is created, upload the two txt files under the [files directory](./files) by going to _Upload_ and _Add files_
