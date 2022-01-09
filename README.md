@@ -5,7 +5,7 @@ Altering images is one of the most common Lambda use-cases. It is often used in 
 
 We will mix things up in this lab and instead of a python function to manipulate the image, we will use Node.js with its fantastic [sharp](https://sharp.pixelplumbing.com/) package.
 
-You can either recreate your lambda and its object lambda access points or you can edit your existing lambda's runtime settings by updating it from _Python 3.8_ to _Node.js 14.x_ and your function handler to _index.handler_
+You can either recreate your lambda and its object lambda access points or you can edit your existing lambda's runtime settings (found by scrolling down in the _Code_ settings) by updating it from _Python 3.x_ to _Node.js 14.x_ and your function handler to _index.handler_
 
 ![image](./images/runtime-settings.png)
 
