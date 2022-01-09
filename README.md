@@ -18,7 +18,7 @@ This is the final lab. Once you're done, be sure to check out the `cleanup` bran
 *** 
 
 #### Image resources
-To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/t/people). 
+To test this function, you have to upload image files into your S3 bucket. You can download stock free images from [Unsplash](https://unsplash.com/t/people). Download colorful images if you'd like to do the challenge.
 
 ***
 
