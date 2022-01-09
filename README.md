@@ -18,7 +18,7 @@ This is the final lab. Once you're done, be sure to check out the `cleanup` bran
 *** 
 
 #### Image resources
-To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/images/eople). 
+To avoid a copyright notice, I have refrained from adding any images in the [files](./files) folder. However, there are several websites you can use to download stock free images like [Unsplash](https://unsplash.com/t/people). 
 
 ***
 
