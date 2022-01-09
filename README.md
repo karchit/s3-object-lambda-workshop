@@ -43,7 +43,7 @@ Windows users can archive the directory using the default windows explorer or ot
 
 3. From the AWS Console, go to Lambda homepage and click on "Create Function".
 
-4. Create a function called `s3-object-lambda-{your_name}` and choose the runtime as Python 3.8. Leave other settings as it is and click on "Create Function"
+4. Create a function called `s3-object-lambda-{your_name}` and choose the runtime as Python 3.8 (or the latest version at your discretion). Leave other settings as it is and click on "Create Function"
 
 ![image](./images/lambda-create.png)
 
