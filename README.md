@@ -7,7 +7,21 @@ You can reuse the resources created in this Lab in the subsequent ones.
 
 ***
 
-Important Note: Use one region across all the resources you are creating. AWS may, by default, select the region closest to you but if you have changed this be sure to use that only. 
+Important Note: Use one region across all the resources you are creating. Since we employ AWS Comprehend in Lab2, please use only one of these regions which support it.
+```
+Asia Pacific (Mumbai)
+Europe (London)
+Europe (Ireland)
+Asia Pacific (Seoul)
+Asia Pacific (Tokyo)
+Canada (Central)
+Asia Pacific (Singapore)
+Asia Pacific (Sydney)
+Europe (Frankfurt)
+US East (N. Virginia)
+US East (Ohio)
+US West (Oregon)
+```
 
 #### Lambda function
 We will first create our lambda function, which will do this transformation:
