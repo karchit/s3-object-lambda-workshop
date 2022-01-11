@@ -9,6 +9,9 @@ You can either re-create all resources you had in Lab 1 or reuse the bucket, acc
 As you had added S3 Object Lambda permissions in Lab 1 to your Lambda IAM role, you'd have to add Comprehend `DetectPiiEntites` permissions so your function can make the required API calls.
 
 ![image](./images/comprehend-policy.png)
+
+Upload your files to your S3 bucket and 'Open' them via the S3 Object Lambda Access Point. Do you see the PII redacted?
+
 ***
 #### Challenge 1
 As part of this challenge, try to do the following which will require you to further examine the response model from AWS Comprehend's Detect PII Entities API [found here](https://docs.aws.amazon.com/comprehend/latest/dg/API_DetectPiiEntities.html):
