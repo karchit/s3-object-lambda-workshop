@@ -17,6 +17,7 @@ def lambda_handler(event, context):
     s3 = boto3.client('s3')
     s3.write_get_object_response(
         Body=json.dumps(list(reader)),
+        ContentType='application/json',
         RequestRoute=request_route,
         RequestToken=request_token)
 
