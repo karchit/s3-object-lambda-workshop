@@ -9,6 +9,11 @@ You can either recreate your lambda and its object lambda access points or you c
 
 ![image](./images/runtime-settings.png)
 
+To download node dependencies, run the following command from the `solution` directory: 
+```
+npm install
+```
+
 Note: Sharp has platform-specific requirements and hence you'll notice the anomalous [package.json](./solution/package.json#L7) installation script (to learn more see [this](https://sharp.pixelplumbing.com/install#aws-lambda)). This is not best practice and, _in the real world_, you would really be using [Docker with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html) and/or [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). This is however is beyond the scope of this workshop. 
 
 Note: increase the timeout of your lambda to 20 seconds so it runs successfully. 
