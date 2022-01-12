@@ -25,7 +25,7 @@ Illustration of AWS S3 Object Lambda
 
 *** 
 Important Note:
-- The dependencies for Lab 1-3 lambda are the same, so you can copy-paste in your `lambda_function.py` via the lambda console. You needn't redownload the dependencies and upload the archive until the last Lab, Lab 4.
+- The dependencies for Lab 1-3 lambda are the same, so you can copy-paste in your `lambda_function.py` via the lambda console. You needn't redownload the dependencies and upload the archive until the last Lab, Lab 4 (which is a NodeJS solution)
 - Once you're done, be sure to check out the `cleanup` branch to delete your resources.
 
 ***
